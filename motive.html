@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./favicon.png" type="image/x-icon">
+    <title>Shudveta - Motive</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #002f6c;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            position: relative;
+            border-bottom: none; /* Remove any bottom border */
+            margin-bottom: 0; /* Remove any margin at the bottom */
+        }
+
+        .logo {
+            height: 80px;
+            width: auto;
+        }
+
+        nav {
+            display: flex;
+            margin: 0; /* Ensure no margin is causing the gap */
+            padding: 0; /* Ensure no padding is causing the gap */
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            margin: 0 20px;
+            font-size: 18px;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            color: #f1f1f1;
+            border-bottom: 2px solid #f1f1f1;
+        }
+
+        /* Hamburger Icon */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .hamburger div {
+            width: 30px;
+            height: 3px;
+            background-color: white;
+        }
+
+        /* Mobile View */
+        @media (max-width: 768px) {
+            header {
+                padding: 20px 15px;
+                flex-direction: row; /* Change to row */
+                justify-content: space-between; /* Ensure logo and hamburger are spaced out */
+                margin-bottom: 0; /* Ensure no margin at the bottom */
+            }
+            .logo {
+                height: 60px;
+            }
+            nav {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 0; /* Remove any margin at the top of the nav */
+                padding: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: #002f6c;
+                z-index: 1000; /* Ensure it appears above other content */
+            }
+            nav a {
+                margin: 10px 0;
+                font-size: 16px;
+            }
+            .hamburger {
+                display: flex;
+            }
+        }
+
+        /* Tablet View */
+        @media (max-width: 1024px) {
+            header {
+                padding: 20px 30px;
+            }
+            .logo {
+                height: 70px;
+            }
+            nav a {
+                font-size: 17px;
+            }
+        }
+
+        /* Motive Section Styling */
+        .motive-section {
+            padding: 40px 20px;
+            background-color: #ffffff;
+            color: #333333;
+            text-align: justify;
+        }
+
+        .motive-section p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin: 20px 0;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .motive-section .highlight {
+            color: #002f6c;
+            font-weight: bold;
+        }
+
+        .motive-section .quote {
+            font-style: italic;
+            margin-top: 30px;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        /* Increased margin and max-width for larger screens */
+        @media (min-width: 1025px) {
+            .motive-section {
+                padding: 60px 20px;
+            }
+            .motive-section p {
+                max-width: 1200px;
+                font-size: 20px;
+            }
+        }
+
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+
+        .container {
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex-grow: 1; /* Allow main content to take up available space */
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #000000;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 16px;
+            margin-top: auto;
+        }
+
+        footer .footer-content p {
+            margin: 5px 0;
+        }
+
+        footer .footer-content a {
+            color: #f1f1f1;
+            text-decoration: none;
+        }
+
+        footer .footer-content a:hover {
+            color: #e0e0e0;
+        }
+
+        /* Make the footer responsive */
+        @media (max-width: 768px) {
+            footer {
+                padding: 15px 0;
+                font-size: 14px;
+            }
+            footer .footer-content p {
+                margin: 3px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="logo.png" alt="Shudveta Logo" class="logo">
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav id="navbar">
+            <a href="./index.html">Home</a>
+            <a href="./motive.html">Motive</a>
+            <a href="./founders.html">Meet Our Founders</a>
+            <a href="./jobs.html">Job Openings</a>
+            <a href="./projects.html">Our Projects</a>
+        </nav>
+    </header>
+
+    <!-- Motive Section -->
+    <section class="motive-section">
+        <p>At Shudveta, our core motive is simple yet profound: to leverage innovation, empathy, and technology to address real-world challenges, particularly in the healthcare sector. Our partnership, founded by <span class="highlight">Raghav Sachdev</span> and <span class="highlight">Dhruvi</span>, is driven by the vision to create impactful solutions that not only improve existing systems but redefine how people access and experience services in today’s fast-paced world.</p>
+        <p>The essence of our mission is rooted in a deep understanding of societal needs and the desire to make a meaningful difference. The name "Shudveta," which is a beautiful blend of the names of our mothers, <span class="highlight">Sudha</span> and <span class="highlight">Shaveta</span>, carries with it a profound meaning—“Pure Nectar.” Just as nectar nourishes and sustains life, we envision our contributions to the world of healthcare and technology as nourishing solutions that help people thrive and flourish. Our purpose goes beyond business growth or product development; we are fueled by the unwavering belief that every innovation we bring to life must have a positive, tangible impact on individuals and communities.</p>
+        <p>As a startup in its early stages, Shudveta is building a foundation on values of empathy, trust, and care, derived from our personal experiences and the lessons passed down to us by our families. We are not simply entrepreneurs, but caretakers, as we believe in the power of responsibility, understanding, and nurturing relationships with all the stakeholders we serve. The very name of Shudveta reflects this ethos, symbolizing purity and a commitment to doing good in the world.</p>
+        <p>Our initial focus is on healthcare technology, where we aim to bridge critical gaps in healthcare access, efficiency, and quality. We know that the healthcare landscape is constantly evolving, and too often, outdated systems create barriers between patients and the care they need. By focusing on providing real-time information, accessible services, and AI-driven support, we aim to streamline healthcare access and improve patient outcomes. But we are also committed to developing solutions that integrate seamlessly with the needs of healthcare professionals, helping them save time, reduce inefficiencies, and focus on what truly matters—providing excellent care.</p>
+        <p>We recognize that the world is more interconnected than ever, but access to reliable and timely information is still a barrier for many. In the fast-paced world of healthcare, being able to make data-driven decisions at a moment’s notice can be the difference between life and death. This urgency fuels our mission to make real-time information available to everyone—from patients and doctors to hospital administrators and ambulance services—so they can act quickly and effectively when it matters most.</p>
+        <p>At Shudveta, we also aim to ensure that healthcare remains human-centered. Our technological solutions are designed to not only provide advanced tools and insights but to be intuitive and accessible, ensuring that all users—whether a patient in need of urgent care or a hospital administrator managing critical resources—can navigate our platforms with ease. We understand that healthcare is not just about medical interventions but about the human connection. Through our products and services, we aim to foster this connection, ensuring that technology enhances, rather than replaces, the human aspect of healthcare.</p>
+        <p>Looking beyond healthcare, Shudveta is driven by the vision of expanding our impact across industries. Whether through streamlining processes in other sectors, improving accessibility to information, or creating more efficient systems, we aim to be a catalyst for positive change. We believe that by integrating empathy and ethics with innovation and technology, we can build solutions that have lasting social and environmental impacts.</p>
+        <p>Our ultimate goal is to create a world where technology is used not just for profit but for the greater good, where every individual, regardless of background or circumstance, can benefit from the solutions we create. Through the work we do at Shudveta, we aim to inspire others to look beyond the conventional, to see opportunities where there may be challenges, and to always keep the greater good at the forefront of their endeavors.</p>
+        <p class="quote">"At the heart of Shudveta is a deep commitment to creating and nurturing an ecosystem that thrives on collaboration, innovation, and purpose. We are excited to embark on this journey, not just to build a successful business, but to make a meaningful, lasting difference in the world." – <span class="highlight">Shudveta Team</span></p>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p> 2025 Shudveta. All rights reserved.</p>
+            <p><a href="mailto:shudveta@gmail.com">shudveta@gmail.com</a></p>
+            <p><a href="https://www.linkedin.com/company/shudveta" target="_blank">Shudveta's LinkedIn</a></p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navbar = document.getElementById('navbar');
+
+        hamburger.addEventListener('click', () => {
+            navbar.style.display = navbar.style.display === 'flex' ? 'none' : 'flex';
+        });
+    </script>
+
+</body>
+</html>

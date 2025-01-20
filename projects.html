@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./favicon.png" type="image/x-icon">
+    <title>Shudveta - Our Projects</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #002f6c;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            position: relative;
+            margin: 0;
+            border-bottom: none; /* Remove any border between header and menu */
+        }
+
+        .logo {
+            height: 80px;
+            width: auto;
+        }
+
+        nav {
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            margin: 0 20px;
+            font-size: 18px;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            color: #f1f1f1;
+            border-bottom: 2px solid #f1f1f1;
+        }
+
+        /* Hamburger Icon */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .hamburger div {
+            width: 30px;
+            height: 3px;
+            background-color: white;
+        }
+
+        /* Mobile View */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex; /* Make it visible on small screens */
+            }
+
+            nav {
+                display: none; /* Hide navbar initially */
+                flex-direction: column;
+                align-items: center;
+                background-color: #002f6c;
+                width: 100%;
+                position: absolute;
+                top: 100%; /* Position below the header */
+                left: 0;
+                padding: 0; /* Remove any padding that could cause extra space */
+                margin: 0; /* Remove any margin */
+                box-shadow: none; /* Remove box-shadow */
+                border: none; /* Ensure no border */
+            }
+
+            nav a {
+                margin: 10px 0;
+                font-size: 16px;
+            }
+        }
+
+        /* Our Projects Section */
+        .projects-section {
+            padding: 40px 20px;
+            background-color: #ffffff;
+            color: #333333;
+            text-align: center;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .project-card {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+        }
+
+        .project-logo {
+            width: 100%;
+            height: 150px;
+            object-fit: contain;
+        }
+
+        .project-description {
+            padding: 20px;
+            font-size: 16px;
+            color: #555;
+        }
+
+        .coming-soon-btn {
+            background-color: #002f6c;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            font-size: 16px;
+            cursor: not-allowed;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .projects-section-main {
+            margin-top: -90px;
+            padding: 60px 20px;
+            background-color: #ffffff;
+            text-align: center;
+        }
+
+        .projects-section-main h1 {
+            font-size: 42px;
+            font-weight: 600;
+            color: #002f6c;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+
+        .message {
+            font-size: 24px;
+            font-weight: bold;
+            color: #555;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        /* Responsive Grid Layout */
+        @media (max-width: 1024px) {
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: 1fr; /* 1 column for mobile */
+            }
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #000000;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        footer .footer-content p {
+            margin: 5px 0;
+        }
+
+        footer .footer-content a {
+            color: #f1f1f1;
+            text-decoration: none;
+        }
+
+        footer .footer-content a:hover {
+            color: #e0e0e0;
+        }
+
+        /* Make the footer responsive */
+        @media (max-width: 768px) {
+            footer {
+                padding: 15px 0;
+                font-size: 14px;
+            }
+
+            footer .footer-content p {
+                margin: 3px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="logo.png" alt="Shudveta Logo" class="logo">
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav id="navbar">
+            <a href="./index.html">Home</a>
+            <a href="./motive.html">Motive</a>
+            <a href="./founders.html">Meet Our Founders</a>
+            <a href="./jobs.html">Job Openings</a>
+            <a href="./projects.html">Our Projects</a>
+        </nav>
+    </header>
+
+    <section class="projects-section" id="projects">
+        <section class="projects-section-main" id="jobs">
+            <h1>Our Projects</h1>
+            <p class="message">We are currently working on a few exciting projects. Stay tuned for more updates!</p>
+        </section>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="./applogo.jpeg" alt="OPD Now Logo" class="project-logo">
+                <div class="project-description">
+                    <p>OPD Now is being designed as an innovative healthcare platform that aims to provide real-time information on hospital resources...</p>
+                </div>
+                <button class="coming-soon-btn" disabled>Coming Soon</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 Shudveta. All rights reserved.</p>
+            <p><a href="mailto:shudveta@gmail.com">shudveta@gmail.com</a></p>
+            <p><a href="https://www.linkedin.com/company/shudveta" target="_blank">Shudveta's LinkedIn</a></p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navbar = document.getElementById('navbar');
+
+        hamburger.addEventListener('click', () => {
+            navbar.style.display = navbar.style.display === 'flex' ? 'none' : 'flex';
+        });
+    </script>
+
+</body>
+</html>
